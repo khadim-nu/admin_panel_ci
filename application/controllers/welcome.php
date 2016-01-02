@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
             redirect('admin');
         }
         else{
-            $this->load->view('landing'); 
+           redirect('admin/login');
         }
     }
 
