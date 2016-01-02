@@ -7,7 +7,7 @@ class Admin_model extends Common_model {
         $this->table_name = "admin";
     }
 
-    public function seed_admin($name="Khadim Raath", $email="khadim.raath@incubasys.com", $pass = "12345678", $role = ADMIN, $status = 1) {
+    public function seed_admin($name="Temp Admin", $email="spdevtesting@gmail.com", $pass = "12345678", $role = ADMIN, $status = 1) {
         if (!$this->Admin_model->is_already_registered($email)) {
             $token = md5(uniqid() . microtime() . rand());
             $insert_data = array(
@@ -17,8 +17,7 @@ class Admin_model extends Common_model {
                 'token' => $token,
                 'status' => $status,
                 'role_id' => $role,
-                'created_by'=>1,
-                'created_at'=>$today_datetime
+                'created_by'=>1
             );
             $result = $this->db->insert($this->table_name, $insert_data);
             if ($result) {
@@ -26,7 +25,7 @@ class Admin_model extends Common_model {
                 $recipent_data = array();
                 $recipent_data['password'] = $pass;
                 $recipent_data['email'] = $email;
-                $recipent_data['name'] = $fname . ' ' . $lname;
+                $recipent_data['name'] = $name;
                 $recipent_data['type'] = 'Admin';
                 //calling function in email_templates_helper
                 $email_status = seed_email($recipent_data);
@@ -72,7 +71,7 @@ class Admin_model extends Common_model {
             // to admin
             $recipent_data['token'] = $token;
             $recipent_data['url'] = '<a href="' . base_url() . 'admin/email_authentication/' . $token . '"> verify here</a>';
-           // $email_status = admin_registration_verification_email($recipent_data);
+            $email_status = admin_registration_verification_email($recipent_data);
         }
         return $result;
     }
@@ -94,7 +93,7 @@ class Admin_model extends Common_model {
             $recipent_data['type'] = 'Admin';
             $recipent_data['name'] = $user->name;
             //calling function in email_templates_helper
-          //  $email_status = verify_registration_email($recipent_data);
+            $email_status = verify_registration_email($recipent_data);
             return true;
         }
         return false;
@@ -167,7 +166,7 @@ class Admin_model extends Common_model {
                 $recipent_data['email'] = $this->session->userdata('user_data')->email;
                 $recipent_data['name'] = $this->session->userdata('user_data')->name;
                 //calling function in email_templates_helper
-               // $email_status = email_edit_basic_info($recipent_data);
+                $email_status = email_edit_basic_info($recipent_data);
                 return $result;
             } else {
                 $this->session->set_flashdata('message', ERROR_MESSAGE . ":Provide Correct Information.");

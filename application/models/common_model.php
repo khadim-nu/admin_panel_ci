@@ -134,7 +134,7 @@ class Common_model extends MY_Model {
                     //$name = explode("@", $row->email);
                     $recipent_data['name'] = $row->name;
                     $recipent_data['url'] = base_url() . $this->table_name . '/verify_forgot_password/' . $row->token;
-                    //forgot_password_email($recipent_data);
+                    forgot_password_email($recipent_data);
                     return true;
                 } else {
                     $this->session->set_flashdata('message', ERROR_MESSAGE . ":Your Account is not active, Please contact to Admin.");

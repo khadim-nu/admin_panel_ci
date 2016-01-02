@@ -9,25 +9,6 @@ function is_admin() {
   }
   return false;
 }
-function is_developer() {
-  $CI = & get_instance();
-  if($CI->session->userdata('user_data')){
-  	if($CI->session->userdata('is_developer')){
-  		return true;
-  	}
-  }
-  return false;
-}
-
-function is_player() {
-  $CI = & get_instance();
-  if($CI->session->userdata('user_data')){
-  	if($CI->session->userdata('is_player')){
-  		return true;
-  	}
-  }
-  return false;
-}
 
 function is_logged_in(){
   $CI = & get_instance();  

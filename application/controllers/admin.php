@@ -10,6 +10,10 @@ class Admin extends MY_Controller {
         $this->load->model('Admin_model');
     }
 
+    public function seed() {
+      $this->Admin_model->seed_admin();
+      die("Seeded");
+    }
     public function index() {
         if (is_admin()) {
             $data['user_role'] = 'admin';
@@ -89,7 +93,7 @@ class Admin extends MY_Controller {
     public function logout() {
         $this->session->sess_destroy();
         $this->session->set_flashdata('message', "Logout Successfully");
-        redirect('welcome');
+        redirect('admin/login');
     }
 
     public function admin_registration() {

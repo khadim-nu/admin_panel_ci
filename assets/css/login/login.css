@@ -1,7 +1,7 @@
 
 html{ height: 100%;}
 body{
-    background:#fff url(../../images/login/IMG_9223.jpg) no-repeat;
+    background:#fff url(../../images/admin/login-bg.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
     min-width: 980px !important;
@@ -519,7 +519,7 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px #fff inset;}
         /*height: 100%;*/
     }
     #login-wrap .holder .wrapper{
-        background: floralwhite;
+        background: currentColor;
         border-radius: 0px;
         margin: 0 auto 20px;
     }

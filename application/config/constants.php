@@ -5,10 +5,10 @@ if (!defined('BASEPATH'))
 
 define('APP_STATIC_URL', 'http://www.test.com/');
 
-define('APP_NAME', 'M-Cars');
-define('ADMIN_EMAIL', 'test@gmail.com');
-define('ADMIN_EMAIL_PASSWORD', 'test');
-define('ADMIN_NAME', 'M-Cars');
+define('APP_NAME', 'Temp Admin');
+define('ADMIN_EMAIL', 'spdevtesting@gmail.com');
+define('ADMIN_EMAIL_PASSWORD', 'sp@fiverr');
+define('ADMIN_NAME', 'Temp Admin');
 define('ADMIN',2);
 define('SUPER_ADMIN',1);
 /*
@@ -62,12 +62,6 @@ define('PASSWORD_MAX_LEN', 20);
 define('FEE_MIN', 0);
 define('FEE_MAX', 1000000001);
 
-// OZone-play constants
-define('GAME_FILE_SIZE', 50480); //50 MB
-define('GAME_FILE_TYPES', 'apk');
-define('GAME_IMAGE_TYPES', 'jpg|jpeg|png');
-define('GAME_IMAGE_SIZE', 500); //1 MB
-
 define('UPLOAD_PATH', 'assets/uploads/');
 define('DEFAULT_SRC', 'assets/images/avatar.jpg');
 define('UPLOAD_IMAGE_SIZE', 512); // 1 MB
@@ -76,12 +70,6 @@ define('IMAGE_MIN_HEIGHT', 162);
 define('IMAGE_MAX_HEIGHT', 1000);
 define('IMAGE_MIN_WIDTH', 150);
 define('IMAGE_MAX_WIDTH', 1500);
-
-// game constants
-define('GAME_IMAGE_MIN_WIDTH', 120);
-define('GAME_IMAGE_MAX_WIDTH', 1200);
-define('BANNER_IMAGE_MIN_WIDTH', 150);
-define('BANNER_IMAGE_MAX_WIDTH', 1500);
 
 define('ERROR_MESSAGE', 'errormsg');
 define('SUCCESS_MESSAGE', 'successmsg');
