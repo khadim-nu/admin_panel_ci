@@ -9,13 +9,13 @@
         </div>
         <div id="form-wrap">
             <?php $form_data = $this->session->flashdata('form_data'); ?>
-            <form id="admin-register" method="post" action="<?= base_url();?>items/export_to_CSV">
+            <form id="admin-register" method="post" action="<?= base_url();?>items/save" enctype="multipart/form-data">
 
                 <fieldset>
                     <div class="row">
                         <div class="input-wrap">
-                            <label>API Key</label>
-                            <input type="text"  name="key" placeholder="Enter API key" data-trigger="change" data-parsley-required />
+                            <label>Phone Number file .csv</label>
+                            <input type="file"name="file" placeholder="Enter API key" data-trigger="change" data-parsley-required />
                         </div>
                     </div>
                 </fieldset>

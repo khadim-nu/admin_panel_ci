@@ -8,7 +8,7 @@
                 </span>
             </div>
             <strong class="logo">
-                <a href="<?= base_url(); ?>welcome">M-CARS</a>
+                <a href="<?= base_url(); ?>welcome">Walter</a>
             </strong>
             <?php $this->load->view('message'); ?>
         </div>

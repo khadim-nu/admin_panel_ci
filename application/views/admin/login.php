@@ -3,7 +3,7 @@
 <div id="login-wrap">
     <div class="main-holder">
         <div class="heading-area">
-            <STRONG class="heading">Lawyer Marketer Scrapers - Login</STRONG>
+            <STRONG class="heading">Walter Tool - Login</STRONG>
         </div>
         <div class="holder">
             <div class="wrapper">

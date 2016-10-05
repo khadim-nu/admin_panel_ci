@@ -18,13 +18,14 @@
                     <li><a href="<?= base_url(); ?>admin/logout">Logout</a></li>
                 </ul>
             </div>
-            <strong class="logo"><a class="name" href="<?= base_url(); ?>">Bionic Scrapers</a></strong>
+            <strong class="logo"><a class="name" href="<?= base_url(); ?>">Walter Tool</a></strong>
             <div class="links">
-                <a class="add-game" href="<?= base_url(); ?>admin/scrape_items">Scrape Items</a>
-                <a class="" href="<?= base_url(); ?>items">Show Scraped Items</a>
-            </div>
+                <a class="add-game" href="<?= base_url(); ?>items/import">Import Numbers</a>
             <div class="links">
-                <a class="" href="<?= base_url(); ?>items/export_to_CSV">Export All to CSV</a>
+            <div class="links">
+                <a class="add-game" href="<?= base_url(); ?>items/showNumbers">Show Numbers</a>
+            <div class="links">
+                <a class="" href="<?= base_url(); ?>items/export">Export All to CSV</a>
             </div>
         </div>
     </header>

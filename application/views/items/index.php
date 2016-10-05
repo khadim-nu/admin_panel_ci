@@ -1,24 +1,30 @@
 <?php $this->load->view('include/admin/header'); ?>
 <div id="main">
     <?php $this->load->view('include/admin/sidebar'); ?>
+
     <div id="content">
         <div class="page-head">
-            <span class="page-heading">Show Scrape Items</span>
+            <span class="page-heading"><?= $title ?></span>
+            <span class="page-heading"><a href="<?= base_url(); ?>items/deleteNumbers">Delete Numbers</a><span>
             <?php $this->load->view('message'); ?>
         </div>
         <div id="form-wrap">
-            <form id="admin-register" method="post" action="<?= base_url(); ?>admin/changepassword">
-                <fieldset>
-                    <div class="post_wrap">
-                        <div class="row">
-                            <div class="">
-                                <a href="<?= base_url(); ?>items/show/ncdd" class="btn_wrap_show" >Show Scraped Items Of ncdd.com</a>
-                            </div>
-
-                        </div>
+            <div class="row">
+                <div class="col-xs-3">Unique Id</div>
+                <div class="col-xs-3">Phone</div>
+            </div>
+            <?php
+            if (!empty($items)) {
+                foreach ($items as $key => $value) {
+                    ?>
+                    <div class="row">
+                        <div class="col-xs-3"><?= $value['uniqueId'] ?></div>
+                        <div class="col-xs-3"><?= $value['phone'] ?></div>
                     </div>
-                </fieldset>
-            </form>
+                    <?php
+                }
+            }
+            ?>
         </div>
     </div>
 </div>
