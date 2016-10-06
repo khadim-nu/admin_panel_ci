@@ -25,7 +25,7 @@
             <div class="links">
                 <a class="add-game" href="<?= base_url(); ?>items/showNumbers">Show Numbers</a>
             <div class="links">
-                <a class="" href="<?= base_url(); ?>items/export">Export All to CSV</a>
+                <a class="" href="<?= base_url(); ?>items/export">Export Data</a>
             </div>
         </div>
     </header>

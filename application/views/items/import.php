@@ -24,7 +24,7 @@
                 <fieldset>
 
                     <div class="row">
-                        <input type="submit" value="Export">
+                        <input type="submit" value="Import">
                     </div>
 
                 </fieldset>
