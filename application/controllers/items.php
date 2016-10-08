@@ -51,10 +51,12 @@ class Items extends MY_Controller {
                 $index = 0;
 //
                 while (($emapData = fgetcsv($file, 10000, ",")) !== FALSE) {
-                    if ($index != 0 && isset($emapData[1]) && !empty(trim($emapData[1]))) {
+                    if ($index != 0 && isset($emapData[0]) && !empty(trim($emapData[0]))) {
+                        $uid = isset($emapData[1]) ? $emapData[0] : 0;
+                        $phone = isset($emapData[1]) ? $emapData[1] : $emapData[0];
                         $item = array(
-                            'uniqueId' => trim($emapData[0]),
-                            'phone' => trim($emapData[1]),
+                            'uniqueId' => trim($uid),
+                            'phone' => trim($phone),
                         );
                         $this->Items_model->save($item);
                     }
