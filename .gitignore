@@ -1,2 +1,4 @@
 /nbproject/private/
 /application/logs/
+/vendor/
+/composer.lock
