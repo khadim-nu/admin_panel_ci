@@ -100,6 +100,7 @@ class Users extends CI_Controller {
     public function show() {
 
         $data['users'] = $this->Users_model->get_all();
+        $data['title']= 'Show social users';
         $this->load->view('users/show',$data);
     }
 
